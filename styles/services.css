@@ -1,0 +1,74 @@
+/* FONTS =================================*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap");
+
+/* COLORS =================================*/
+:root {
+  --green: #4a8284;
+  --green-dark: #08191a;
+  --brown: #331e1a;
+  --gray: #aca2a0;
+  --white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+}
+
+#services > .title {
+  margin-top: 2%;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  margin-top: 3%;
+}
+
+.services img {
+  max-width: 20%;
+  margin-bottom: 2%;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.contents > h1 {
+  font-family: Noto Serif;
+  font-size: 2.5rem;
+  color: var(--brown);
+  margin-bottom: 10%;
+}
+
+.topics {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.topics > p {
+  font-size: 1.4rem;
+}
+
+.col::before {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: var(--brown);
+  position: absolute;
+  transform: rotate(90deg);
+  left: 70%;
+  top: 50%;
+}
+.col::after {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: var(--brown);
+  position: absolute;
+  transform: rotate(90deg);
+  right: 70%;
+  top: 50%;
+}

@@ -1,0 +1,57 @@
+/* COLORS =================================*/
+:root {
+  --green: #4a8284;
+  --green-dark: #08191a;
+  --brown: #331e1a;
+  --gray: #aca2a0;
+  --white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+}
+
+#header {
+  color: var(--white);
+  background-color: var(--green);
+  width: 100%;
+  padding: 20px;
+  /* position: fixed;
+  z-index: 99; */
+}
+
+#header .contents_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.logo h1,
+.contents_nav .nav {
+  font-weight: 400;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu_item > a {
+  position: relative;
+  color: var(--white);
+}
+
+/* NAV-ANIMATION =================================*/
+.menu_item > a::before {
+  content: "";
+  position: absolute;
+  background-color: var(--brown);
+  width: 0%;
+  height: 1px;
+  transition: all 0.35s ease-in-out;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 110%;
+}
+
+.menu_item > a:hover::before {
+  width: 100%;
+}

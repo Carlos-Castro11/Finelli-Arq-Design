@@ -1,0 +1,30 @@
+/* STYLES ===================================*/
+@import url(./nav.css);
+@import url(./banner.css);
+@import url(./projects.css);
+@import url(./services.css);
+@import url(./about.css);
+
+/* FONTS ===================================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* COLORS =================================*/
+:root {
+  --green: #4a8284;
+  --green-dark: #08191a;
+  --brown: #331e1a;
+  --gray: #aca2a0;
+  --white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+}
+
+/* RESET ===================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
