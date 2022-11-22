@@ -1,3 +1,4 @@
+// carousel
 const gallery = document.querySelectorAll(".gallery img");
 const galleryContainer = document.querySelector(".galleryContainer");
 
@@ -16,3 +17,81 @@ function imgGalleryFunction3() {
   gallery[0].classList.add("disable");
   gallery[2].classList.remove("disable");
 }
+
+// projects scroll
+const windowHalf = window.innerHeight * 0.7;
+const projects = document.querySelector(".left");
+
+function projectAnimation() {
+  const projectTop = projects.getBoundingClientRect().top;
+  const isProjectVisible = projectTop - windowHalf < 0;
+  const isProjectInvisible = projectTop - windowHalf > 220;
+  if (isProjectVisible) projects.classList.add("animate");
+  if (isProjectInvisible) projects.classList.remove("animate");
+}
+
+window.addEventListener("scroll", projectAnimation);
+
+const projects2 = document.querySelector(".right");
+
+function project2Animation() {
+  const project2Top = projects2.getBoundingClientRect().top;
+  const isProject2Visible = project2Top - windowHalf < 0;
+  const isProject2Invisible = project2Top - windowHalf > 220;
+  if (isProject2Visible) projects2.classList.add("animate");
+  if (isProject2Invisible) projects2.classList.remove("animate");
+}
+
+window.addEventListener("scroll", project2Animation);
+
+// services scroll
+const col = document.querySelector(".services_col");
+
+function colAnimation() {
+  const colTop = col.getBoundingClientRect().top;
+  const isColVisible = colTop - windowHalf < 0;
+  const isColInvisible = colTop - windowHalf > 220;
+  if (isColVisible) col.classList.add("animate");
+  if (isColInvisible) col.classList.remove("animate");
+}
+
+window.addEventListener("scroll", colAnimation);
+
+const col2 = document.querySelector(".services_col2");
+
+function col2Animation() {
+  const col2Top = col2.getBoundingClientRect().top;
+  const isCol2Visible = col2Top - windowHalf < 0;
+  const isCol2Invisible = col2Top - windowHalf > 220;
+  if (isCol2Visible) col2.classList.add("animate");
+  if (isCol2Invisible) col2.classList.remove("animate");
+}
+
+window.addEventListener("scroll", col2Animation);
+
+const col3 = document.querySelector(".services_col3");
+
+function col3Animation() {
+  const col3Top = col3.getBoundingClientRect().top;
+  const isColVisible = col3Top - windowHalf < 0;
+  const isColInvisible = col3Top - windowHalf > 220;
+  if (isColVisible) col3.classList.add("animate");
+  if (isColInvisible) col3.classList.remove("animate");
+}
+
+window.addEventListener("scroll", col3Animation);
+
+// HOVER EFFECT
+const img = document.querySelector(".project_img");
+console.log(img);
+
+function teste() {
+  img.classList.add("black_background");
+}
+function teste2() {
+  console.log("saiu");
+  img.classList.remove("black_background");
+}
+
+img.addEventListener("mouseenter", teste);
+img.addEventListener("mouseout", teste2);
