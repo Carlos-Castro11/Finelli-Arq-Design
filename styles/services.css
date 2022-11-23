@@ -20,6 +20,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   margin-top: 3%;
+  overflow: hidden;
 }
 
 .services img {

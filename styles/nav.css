@@ -13,8 +13,8 @@
   background-color: var(--green);
   width: 100%;
   padding: 20px;
-  /* position: fixed;
-  z-index: 99; */
+  position: fixed;
+  z-index: 99;
 }
 
 #header .contents_nav {

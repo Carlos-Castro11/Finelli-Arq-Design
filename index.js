@@ -80,18 +80,3 @@ function col3Animation() {
 }
 
 window.addEventListener("scroll", col3Animation);
-
-// HOVER EFFECT
-const img = document.querySelector(".project_img");
-console.log(img);
-
-function teste() {
-  img.classList.add("black_background");
-}
-function teste2() {
-  console.log("saiu");
-  img.classList.remove("black_background");
-}
-
-img.addEventListener("mouseenter", teste);
-img.addEventListener("mouseout", teste2);

@@ -42,7 +42,7 @@
   justify-content: space-between;
   align-items: center;
   background: var(--green);
-  color: var(--green-dark);
+  color: var(--white);
   margin-bottom: 16px;
   padding: 16px;
 }
@@ -81,8 +81,6 @@
   color: var(--white);
   gap: 32px;
   display: flex;
-  padding-right: 32px;
-  border-right: 1px solid var(--white);
 }
 .footer-direitos {
   padding-top: 16px;

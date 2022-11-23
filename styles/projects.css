@@ -26,23 +26,6 @@
 
 /* PROJECTS IMG */
 
-.left > img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  border-radius: 5px;
-  position: relative;
-}
-
-.right > img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  border-radius: 5px;
-}
-
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -66,4 +49,251 @@
   opacity: 0;
   transition: 0.4s;
   transform: translate3d(30px, 0, 0);
+}
+
+.left > a > img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.right > a > img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.left > a {
+  position: relative;
+  color: white;
+}
+
+.right > a {
+  position: relative;
+  color: white;
+}
+
+.left > a::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.left > a:hover::before {
+  opacity: 1;
+}
+
+.right > a::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.right > a:hover::before {
+  opacity: 1;
+}
+
+/* TEXTS */
+.left > a > h3,
+.left > a > h6 {
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* LEFT TEXTS */
+.left > a > h3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+}
+
+.left > a > h6 {
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  color: var(--green);
+  font-family: Noto Serif;
+}
+
+.left > a:hover > h3,
+.left > a:hover > h6 {
+  opacity: 1;
+}
+
+/* RIGHT TEXTS */
+.right > a > h3,
+.right > a > h6 {
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.right > a > h3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.right > a > h6 {
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  color: var(--green);
+  font-family: Noto Serif;
+}
+
+.right > a:hover > h3,
+.right > a:hover > h6 {
+  opacity: 1;
+}
+
+/* ANIMATIONS */
+
+/* BORDER-BOTTOM */
+.right > a > .border1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 10%;
+  bottom: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.right > a:hover > .border1::before {
+  width: 80%;
+}
+
+.left > a > .border1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 10%;
+  bottom: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.left > a:hover > .border1::before {
+  width: 80%;
+}
+
+/* BORDER-RIGHT */
+.right > a > .border2::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 2px;
+  right: 10%;
+  bottom: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.right > a:hover > .border2::before {
+  height: 72%;
+}
+
+.left > a > .border2::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 2px;
+  right: 10%;
+  bottom: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.left > a:hover > .border2::before {
+  height: 72%;
+}
+
+/* BORDER-TOP */
+.right > a > .border3::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 10%;
+  top: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.right > a:hover > .border3::before {
+  width: 80%;
+}
+
+.left > a > .border3::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 10%;
+  top: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.left > a:hover > .border3::before {
+  width: 80%;
+}
+
+/* BORDER-LEFT */
+.right > a > .border4::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 2px;
+  left: 10%;
+  bottom: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.right > a:hover > .border4::before {
+  height: 72%;
+}
+
+.left > a > .border4::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 2px;
+  left: 10%;
+  bottom: 14%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.left > a:hover > .border4::before {
+  height: 72%;
 }
