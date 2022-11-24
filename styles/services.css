@@ -54,9 +54,9 @@
 }
 
 /* DIVIDERS =================================*/
-.dividers::before {
+/* .dividers::before {
   content: "";
-  width: 80%;
+  width: 100%;
   height: 1px;
   background-color: var(--brown);
   position: absolute;
@@ -66,14 +66,14 @@
 }
 .dividers::after {
   content: "";
-  width: 80%;
+  width: 100%;
   height: 1px;
   background-color: var(--brown);
   position: absolute;
   transform: rotate(90deg);
   right: 70%;
   top: 50%;
-}
+} */
 
 /* SCROLL SERVICES ANIMATION ================================*/
 
@@ -84,10 +84,14 @@
 }
 
 .services_col2 {
+  border-left: 1px solid var(--brown);
+  border-right: 1px solid var(--brown);
   opacity: 0;
   transition: 0.4s;
   transition-delay: 100ms;
   transform: translate3d(0, 30px, 0);
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .services_col3 {
@@ -99,4 +103,28 @@
 .animate {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+@media (max-width: 1100px) {
+  .services {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-bottom: 64px;
+  }
+  .services_col,
+  .services_col2 {
+    padding-bottom: 32px;
+    border-bottom: 2px solid var(--brown);
+    border-right: none;
+    border-left: none;
+  }
+  .dividers::before,
+  .dividers::after {
+    display: none;
+  }
+
+  .services_col2 {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
 }

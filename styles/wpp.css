@@ -1,0 +1,13 @@
+.wpp_button > img {
+  width: 70px;
+  position: fixed;
+  z-index: 99;
+  left: 60px;
+  bottom: 50px;
+  filter: drop-shadow(0 0 1px black);
+  transition: all 0.2s ease-in-out;
+}
+
+.wpp_button > img:hover {
+  filter: drop-shadow(0 0 4px green);
+}

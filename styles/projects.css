@@ -297,3 +297,10 @@
 .left > a:hover > .border4::before {
   height: 72%;
 }
+
+@media (max-width: 1100px) {
+  .left,
+  .right {
+    grid-template-columns: 1fr;
+  }
+}
