@@ -9,9 +9,11 @@
 
 #about {
   margin-top: 3%;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 .about-container img {
+  object-fit: cover;
+  height: 82%;
   width: 100%;
 }
 .about-container {
@@ -48,23 +50,25 @@
   padding: 16px;
 }
 
-.orcamento-contents {
-  padding: 11px;
-}
-
 .formacao-contents p,
 .orcamento-contents p {
   font-weight: bold;
   font-size: 1.25rem;
+  color: var(--white);
 }
 .formacao-contents span,
 .orcamento-contents span {
   font-size: 0.875rem;
 }
+@media (max-width: 1100px) {
+  .about-container img {
+    height: 100%;
+  }
+}
+
 @media (max-width: 800px) {
   .about-container img {
     height: 100%;
-    object-fit: cover;
   }
   .about-container {
     gap: 32px;
@@ -76,12 +80,9 @@
   }
 }
 @media (max-width: 600px) {
-  .about-container img {
-    height: 60%;
+  .about-container > img {
+    height: 500px;
     object-fit: cover;
-  }
-  .about-contents {
-    background: red;
   }
   .about-container {
     grid-template-columns: 1fr;

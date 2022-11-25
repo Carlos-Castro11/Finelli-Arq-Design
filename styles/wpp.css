@@ -1,13 +1,55 @@
+/* COLORS =================================*/
+:root {
+  --green: #4a8284;
+  --green-dark: #08191a;
+  --brown: #331e1a;
+  --gray: #aca2a0;
+  --white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+}
+
 .wpp_button > img {
-  max-width: 100%;
+  width: 64px;
+  height: 64px;
   position: fixed;
   z-index: 99;
-  left: 60px;
-  bottom: 50px;
-  filter: drop-shadow(0 0 1px black);
+  left: 7%;
+  bottom: 5%;
+  filter: drop-shadow(0 0 2px black);
   transition: all 0.2s ease-in-out;
+  display: none;
 }
 
 .wpp_button > img:hover {
-  filter: drop-shadow(0 0 4px green);
+  filter: drop-shadow(0 0 3px black);
+}
+
+/* BACK TO TOP */
+.back_to_top_button {
+  position: fixed;
+  z-index: 99;
+  right: 7%;
+  bottom: 5%;
+  background-color: var(--green);
+  border-radius: 50%;
+  padding: 15px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 2px black;
+  display: none;
+}
+
+.back_to_top_button > img {
+  object-fit: contain;
+  height: 32px;
+  width: 32px;
+}
+
+@media (max-width: 900px) {
+  .back_to_top_button {
+    display: flex;
+  }
+
+  .wpp_button > img {
+    display: flex;
+  }
 }

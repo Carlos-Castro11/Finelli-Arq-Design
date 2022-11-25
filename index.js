@@ -100,9 +100,29 @@ window.addEventListener("scroll", transitionNavbar);
 // MOBILE MENU
 const button_mobile = document.querySelector(".nav_mobile");
 const menu_mobile = document.querySelector(".menu");
+const menu_items = document.querySelectorAll(".menu_item");
+let menuOpen = false;
 
 function showMenuMobile() {
-  menu_mobile.classList.add("show_mobile");
+  if (!menuOpen) {
+    menu_mobile.classList.add("show_mobile");
+    button_mobile.classList.add("animation");
+    menuOpen = true;
+  } else {
+    menu_mobile.classList.remove("show_mobile");
+    button_mobile.classList.remove("animation");
+    menuOpen = false;
+  }
 }
+
+function removeMenuMobile() {
+  menu_mobile.classList.remove("show_mobile");
+  button_mobile.classList.remove("animation");
+  menuOpen = false;
+}
+
+menu_items.forEach((item) => {
+  item.addEventListener("click", removeMenuMobile);
+});
 
 button_mobile.addEventListener("click", showMenuMobile);

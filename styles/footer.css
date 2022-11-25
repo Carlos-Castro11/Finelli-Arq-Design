@@ -8,8 +8,6 @@
 .footer-contents {
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--white);
 }
@@ -19,6 +17,7 @@
   gap: 32px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .footer-direitos {
   padding-top: 16px;
@@ -26,6 +25,7 @@
   margin: 0 auto;
   font-size: 1rem;
   color: var(--white);
+  text-align: center;
 }
 
 .info {
@@ -40,7 +40,14 @@
   padding-left: 30px;
   padding-right: 30px;
 }
-
+@media (max-width: 900px) {
+  .info:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 /* ICONS ANIMATION */
 
 /* PHONE ANIMATION */

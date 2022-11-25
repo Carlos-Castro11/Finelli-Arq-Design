@@ -5,7 +5,7 @@
 .gallery img {
   animation: imgTransition 1s forwards;
   object-fit: cover;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
 }
 @keyframes imgTransition {
@@ -24,7 +24,7 @@
 .ops {
   padding: 10px;
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%);
   z-index: 99;
@@ -48,4 +48,25 @@
   background: var(--green);
   width: 25px;
   height: 25px;
+}
+@media (max-width: 1000px) {
+  .gallery img {
+    height: 60vh;
+  }
+  .ops {
+    top: 85%;
+  }
+}
+@media (max-width: 800px) {
+  .gallery img {
+    height: 50vh;
+  }
+  .ops {
+    top: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .gallery img {
+    height: 40vh;
+  }
 }

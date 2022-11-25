@@ -21,7 +21,6 @@
   padding: 20px;
   position: fixed;
   z-index: 99999;
-
   overflow-x: hidden;
 }
 
@@ -71,18 +70,20 @@
   display: none;
   padding: 20px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   background-color: var(--green);
+  cursor: pointer;
 }
 
 .nav_mobile::before {
   content: "";
-  background-color: white;
+  background-color: var(--white);
   width: 22px;
   height: 2px;
   position: absolute;
-  box-shadow: 0 7px white, 0 -7px white;
-  transform: translate(-50%);
+  box-shadow: 0 7px var(--white), 0 -7px var(--white);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
 .menu_mobile {
@@ -91,23 +92,33 @@
   margin-top: 8%;
   font-size: 1.4rem;
   text-align: center;
-  background-color: white;
+  background-color: var(--white);
   padding: 10px;
   right: 5%;
   border-radius: 5px;
 }
 
+/* NAV-MOBILE ANIMATION ===================================*/
+.animation::before {
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 8px var(--white), 0 -8px var(--white);
+  transform: rotate(90deg);
+  display: flex;
+  place-self: center;
+}
+
+/* REPONSIVE */
 @media (max-width: 900px) {
   .menu {
     position: fixed;
     display: flex;
+    z-index: 9999999;
     flex-direction: column;
     gap: 50px;
     margin-top: 5%;
     font-size: 1.7rem;
     text-align: center;
-    place-content: center;
-    place-items: center;
     background-color: var(--green);
     right: 2%;
     padding: 50px;
@@ -135,6 +146,11 @@
   }
 
   .nav_mobile {
-    display: block;
+    display: flex;
+    place-content: center;
+  }
+
+  #header {
+    position: relative;
   }
 }
