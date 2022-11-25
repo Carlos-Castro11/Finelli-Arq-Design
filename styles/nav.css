@@ -120,7 +120,7 @@
     z-index: 9999999;
     flex-direction: column;
     gap: 50px;
-    top: 8%;
+    top: 18%;
     font-size: 1.7rem;
     text-align: center;
     background-color: var(--green);
