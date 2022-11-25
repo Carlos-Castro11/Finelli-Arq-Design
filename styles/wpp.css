@@ -44,6 +44,8 @@
   width: 32px;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .back_to_top_button {
     display: flex;
@@ -51,5 +53,28 @@
 
   .wpp_button > img {
     display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  .wpp_button > img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .back_to_top_button > img {
+    height: 25px;
+    width: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .wpp_button > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .back_to_top_button > img {
+    height: 20px;
+    width: 20px;
   }
 }

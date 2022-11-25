@@ -73,6 +73,7 @@
   border: 2px solid var(--white);
   background-color: var(--green);
   cursor: pointer;
+  position: relative;
 }
 
 .nav_mobile::before {
@@ -81,31 +82,34 @@
   width: 22px;
   height: 2px;
   position: absolute;
-  box-shadow: 0 7px var(--white), 0 -7px var(--white);
+  bottom: 11px;
+  box-shadow: 0 -7px var(--white);
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
 
-.menu_mobile {
-  display: none;
-  position: fixed;
-  margin-top: 8%;
-  font-size: 1.4rem;
-  text-align: center;
+.nav_mobile::after {
+  content: "";
   background-color: var(--white);
-  padding: 10px;
-  right: 5%;
+  width: 22px;
+  height: 2px;
+  position: absolute;
+  bottom: 25px;
+  transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
 
 /* NAV-MOBILE ANIMATION ===================================*/
 .animation::before {
-  width: 4px;
-  height: 4px;
-  box-shadow: 0 8px var(--white), 0 -8px var(--white);
-  transform: rotate(90deg);
+  box-shadow: 0 0px var(--white);
+  transform: rotate(135deg);
   display: flex;
-  place-self: center;
+  bottom: 18px;
+}
+.animation::after {
+  transform: rotate(-135deg);
+  display: flex;
+  bottom: 18px;
 }
 
 /* REPONSIVE */
@@ -116,11 +120,11 @@
     z-index: 9999999;
     flex-direction: column;
     gap: 50px;
-    margin-top: 5%;
+    top: 8%;
     font-size: 1.7rem;
     text-align: center;
     background-color: var(--green);
-    right: 2%;
+    right: 1%;
     padding: 50px;
     border-radius: 5px;
     box-shadow: 0px 0px 3px black;
@@ -153,4 +157,14 @@
   #header {
     position: relative;
   }
+}
+
+@media (max-width: 550px) {
+  .menu {
+    padding: 45px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
 }

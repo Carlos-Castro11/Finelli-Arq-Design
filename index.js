@@ -101,6 +101,7 @@ window.addEventListener("scroll", transitionNavbar);
 const button_mobile = document.querySelector(".nav_mobile");
 const menu_mobile = document.querySelector(".menu");
 const menu_items = document.querySelectorAll(".menu_item");
+const page = document.querySelector("#main");
 let menuOpen = false;
 
 function showMenuMobile() {
@@ -126,3 +127,4 @@ menu_items.forEach((item) => {
 });
 
 button_mobile.addEventListener("click", showMenuMobile);
+page.addEventListener("click", removeMenuMobile);

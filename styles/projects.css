@@ -353,10 +353,6 @@
 }
 
 @media (max-width: 900px) {
-  .left,
-  .right {
-    grid-template-columns: 1fr;
-  }
   .left > a > h3,
   .right > a > h3 {
     font-size: 1.4rem;
@@ -368,25 +364,6 @@
 }
 
 @media (max-width: 720px) {
-  .left,
-  .right {
-    grid-template-columns: 1fr;
-  }
-  .left > a > h3,
-  .right > a > h3 {
-    font-size: 1.2rem;
-  }
-  .left > a > h6,
-  .right > a > h6 {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 720px) {
-  .left,
-  .right {
-    grid-template-columns: 1fr;
-  }
   .left > a > h3,
   .right > a > h3 {
     font-size: 1.2rem;
@@ -398,21 +375,28 @@
 }
 
 @media (max-width: 550px) {
-  .left,
-  .right {
-    grid-template-columns: 1fr;
-  }
   .left > a > h3,
   .right > a > h3 {
     font-size: 1rem;
   }
+
+  .projects {
+    gap: 25px;
+  }
+
+  .left {
+    gap: 25px;
+  }
+  .right {
+    gap: 25px;
+  }
+
+  .title > h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 350px) {
-  .left,
-  .right {
-    grid-template-columns: 1fr;
-  }
   .left > a > h3,
   .right > a > h3 {
     font-size: 0.9rem;
