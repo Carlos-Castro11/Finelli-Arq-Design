@@ -17,16 +17,17 @@
   }
 }
 
-.gallery {
+.galleryContainer {
   position: relative;
 }
 
 .ops {
   padding: 10px;
   position: absolute;
-  top: 0%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%);
+  z-index: 99;
 }
 
 .ops input {

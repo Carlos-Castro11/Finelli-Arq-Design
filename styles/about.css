@@ -36,6 +36,7 @@
   font-size: 1.25rem;
   margin-bottom: 32px;
 }
+
 .formacao-contents,
 .orcamento-contents {
   display: flex;
@@ -45,6 +46,10 @@
   color: var(--white);
   margin-bottom: 16px;
   padding: 16px;
+}
+
+.orcamento-contents {
+  padding: 12.5px;
 }
 
 .formacao-contents p,
@@ -81,36 +86,4 @@
   .about-container {
     grid-template-columns: 1fr;
   }
-}
-/* FOOTER */
-.footer {
-  padding: 64px;
-  background: var(--green);
-  border-top: 8px solid var(--gray);
-  display: grid;
-}
-.footer-contents {
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--white);
-}
-.footer-contents nav {
-  padding-left: 32px;
-}
-.footer-contato {
-  font-size: 1.25rem;
-  color: var(--white);
-  gap: 32px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer-direitos {
-  padding-top: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: var(--white);
 }

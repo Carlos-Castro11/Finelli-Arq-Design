@@ -80,3 +80,21 @@ function col3Animation() {
 }
 
 window.addEventListener("scroll", col3Animation);
+
+// HEADER SHADOW
+let handleShow = false;
+const header = document.querySelector("#header");
+
+const transitionNavbar = () => {
+  if (window.scrollY > 100) {
+    handleShow = true;
+    header.classList.add("shadow");
+  } else {
+    handleShow = false;
+    header.classList.remove("shadow");
+  }
+};
+
+window.addEventListener("scroll", transitionNavbar);
+
+// HEADER HEIGHT

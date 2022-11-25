@@ -1,5 +1,5 @@
 .wpp_button > img {
-  width: 70px;
+  max-width: 100%;
   position: fixed;
   z-index: 99;
   left: 60px;

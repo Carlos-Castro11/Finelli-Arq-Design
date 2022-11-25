@@ -1,0 +1,132 @@
+.footer {
+  padding: 64px;
+  background: var(--green);
+  border-top: 8px solid var(--gray);
+  display: grid;
+}
+
+.footer-contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--white);
+}
+.footer-contato {
+  font-size: 1.25rem;
+  color: var(--white);
+  gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-direitos {
+  padding-top: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.info:nth-child(2) {
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* ICONS ANIMATION */
+
+/* PHONE ANIMATION */
+.info.info:nth-child(1) > a {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.info.info:nth-child(1) > a > img {
+  position: relative;
+  width: 90%;
+  z-index: 9999;
+}
+
+.info.info:nth-child(1) > a::before {
+  content: "";
+  background: linear-gradient(45deg, #1ebea5, #00e676);
+  height: 0%;
+  width: 120%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.info.info:nth-child(1) > a:hover::before {
+  height: 120%;
+}
+
+/* INSTAGRAM ANIMATION */
+.info.info:nth-child(2) > a {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.info.info:nth-child(2) > a > img {
+  position: relative;
+  width: 90%;
+  z-index: 9999;
+}
+
+.info.info:nth-child(2) > a::before {
+  content: "";
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  height: 0%;
+  width: 120%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.info.info:nth-child(2) > a:hover::before {
+  height: 120%;
+}
+
+/* MAIL ANIMATION */
+.info.info:nth-child(3) > a {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.info.info:nth-child(3) > a > img {
+  position: relative;
+  width: 90%;
+  z-index: 9999;
+}
+
+.info.info:nth-child(3) > a::before {
+  content: "";
+  background: linear-gradient(to top, #83eaf1, #63a4ff);
+  height: 0%;
+  width: 120%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.info.info:nth-child(3) > a:hover::before {
+  height: 120%;
+}
