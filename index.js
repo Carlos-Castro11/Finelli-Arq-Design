@@ -97,4 +97,12 @@ const transitionNavbar = () => {
 
 window.addEventListener("scroll", transitionNavbar);
 
-// HEADER HEIGHT
+// MOBILE MENU
+const button_mobile = document.querySelector(".nav_mobile");
+const menu_mobile = document.querySelector(".menu");
+
+function showMenuMobile() {
+  menu_mobile.classList.add("show_mobile");
+}
+
+button_mobile.addEventListener("click", showMenuMobile);
