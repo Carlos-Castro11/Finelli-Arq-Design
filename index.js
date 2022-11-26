@@ -18,33 +18,51 @@ function imgGalleryFunction3() {
   gallery[2].classList.remove("disable");
 }
 
-// projects scroll
+// CAROUSSEL SCROLL
+const section = document.querySelector(".js_scroll");
+const windowHalf3 = window.innerHeight * 0.9;
+
+function itemAnimation() {
+  const itemTop = section.getBoundingClientRect().top;
+  const isItemVisible = itemTop - windowHalf3 < 0;
+  const isItemInvisible = itemTop - windowHalf3 > 50;
+  if (isItemVisible) section.classList.add("animate");
+  if (isItemInvisible) section.classList.remove("animate");
+}
+
+itemAnimation();
+window.addEventListener("scroll", itemAnimation);
+
+// PROJECTS SCROLL
 const windowHalf = window.innerHeight * 0.7;
 const projects = document.querySelector(".left");
+const windowHalf2 = window.innerHeight * 0.93;
 
 function projectAnimation() {
   const projectTop = projects.getBoundingClientRect().top;
-  const isProjectVisible = projectTop - windowHalf < 0;
-  const isProjectInvisible = projectTop - windowHalf > 220;
+  const isProjectVisible = projectTop - windowHalf2 < 220;
+  const isProjectInvisible = projectTop - windowHalf2 > 220;
   if (isProjectVisible) projects.classList.add("animate");
   if (isProjectInvisible) projects.classList.remove("animate");
 }
 
+projectAnimation();
 window.addEventListener("scroll", projectAnimation);
 
 const projects2 = document.querySelector(".right");
 
 function project2Animation() {
   const project2Top = projects2.getBoundingClientRect().top;
-  const isProject2Visible = project2Top - windowHalf < 0;
-  const isProject2Invisible = project2Top - windowHalf > 220;
+  const isProject2Visible = project2Top - windowHalf2 < 220;
+  const isProject2Invisible = project2Top - windowHalf2 > 220;
   if (isProject2Visible) projects2.classList.add("animate");
   if (isProject2Invisible) projects2.classList.remove("animate");
 }
 
+project2Animation();
 window.addEventListener("scroll", project2Animation);
 
-// services scroll
+// SERVICES SCROLL
 const col = document.querySelector(".services_col");
 
 function colAnimation() {
@@ -80,6 +98,55 @@ function col3Animation() {
 }
 
 window.addEventListener("scroll", col3Animation);
+
+// ABOUT SCROLL
+const about_img = document.querySelector(".img_about");
+
+function imgAboutAnimation() {
+  const aboutImgTop = about_img.getBoundingClientRect().top;
+  const isAboutImgVisible = aboutImgTop - windowHalf < 0;
+  const isAboutImgInvisible = aboutImgTop - windowHalf > 220;
+  if (isAboutImgVisible) about_img.classList.add("animate");
+  if (isAboutImgInvisible) about_img.classList.remove("animate");
+}
+
+window.addEventListener("scroll", imgAboutAnimation);
+
+const about_contents = document.querySelector(".about-contents");
+
+function contentsAboutAnimation() {
+  const aboutContentsTop = about_contents.getBoundingClientRect().top;
+  const isAboutContentsVisible = aboutContentsTop - windowHalf < 0;
+  const isAboutContentsInvisible = aboutContentsTop - windowHalf > 220;
+  if (isAboutContentsVisible) about_contents.classList.add("animate");
+  if (isAboutContentsInvisible) about_contents.classList.remove("animate");
+}
+
+window.addEventListener("scroll", contentsAboutAnimation);
+
+// FOOTER SCROLL
+const footer = document.querySelector(".footer-contents");
+const footerBottom = document.querySelector(".footer-direitos");
+const footerHeight = window.innerHeight * 0.9;
+
+function footerAnimation() {
+  const footerTop = footer.getBoundingClientRect().top;
+  const isFooterVisible = footerTop - footerHeight < 0;
+  const isFooterInvisible = footerTop - footerHeight > 220;
+  if (isFooterVisible) footer.classList.add("animate");
+  if (isFooterInvisible) footer.classList.remove("animate");
+}
+
+function footerBottomAnimation() {
+  const footerTop = footerBottom.getBoundingClientRect().top;
+  const isFooterVisible = footerTop - footerHeight < 0;
+  const isFooterInvisible = footerTop - footerHeight > 220;
+  if (isFooterVisible) footerBottom.classList.add("animate");
+  if (isFooterInvisible) footerBottom.classList.remove("animate");
+}
+
+window.addEventListener("scroll", footerAnimation);
+window.addEventListener("scroll", footerBottomAnimation);
 
 // HEADER SHADOW
 let handleShow = false;

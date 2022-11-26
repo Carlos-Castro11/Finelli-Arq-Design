@@ -13,12 +13,11 @@
   box-shadow: 0px 0px 6px black;
   transition: all 0.5s ease-in-out;
 }
-
 #header {
   color: var(--white);
   background-color: var(--green);
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   z-index: 99999;
   overflow-x: hidden;
@@ -32,9 +31,13 @@
   margin: 0 5%;
 }
 
-.logo h1,
 .contents_nav .nav {
   font-weight: 400;
+}
+
+.logo > img {
+  height: 70px;
+  width: 257px;
 }
 
 .menu {
@@ -52,7 +55,7 @@
 .menu_item > a::before {
   content: "";
   position: absolute;
-  background-color: var(--brown);
+  background-color: var(--white);
   width: 0%;
   height: 1px;
   transition: all 0.35s ease-in-out;
@@ -120,7 +123,7 @@
     z-index: 9999999;
     flex-direction: column;
     gap: 50px;
-    top: 18%;
+    top: 10%;
     font-size: 1.7rem;
     text-align: center;
     background-color: var(--green);
@@ -167,4 +170,14 @@
 }
 
 @media (max-width: 400px) {
+}
+
+@media (max-width: 360px) {
+  #header .contents_nav {
+    justify-content: center;
+  }
+
+  .menu {
+    top: 13%;
+  }
 }
